@@ -112,3 +112,9 @@ python plots/run_plots.py
 
 **Ankit Kero**
 IIT Patna
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub!
