@@ -70,7 +70,7 @@ The following plots are generated:
 ##  How to Run
 
 ```bash
-git clone https://github.com/your-username/isac-vehicular-network-simulation.git
+git clone https://github.com/kairo786/isac-vehicular-network-simulation.git
 cd isac-vehicular-network-simulation
 pip install -r requirements.txt
 python plots/run_plots.py
