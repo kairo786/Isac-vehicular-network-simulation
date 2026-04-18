@@ -9,16 +9,14 @@ import config
 from simulation.metrics import compute_metrics
 
 
-# =========================
+
 # CORE RUN
-# =========================
 def run_sim():
     return compute_metrics(config.num_trials)
 
 
-# =========================
+
 # SAFE CONFIG BACKUP (NO deepcopy)
-# =========================
 def backup_config():
     backup = {}
     for k, v in config.__dict__.items():
@@ -51,9 +49,8 @@ def safe_run_sim(modify_fn):
         restore_config(backup)
 
 
-# =========================
+
 # 1. PSP vs Distance
-# =========================
 def plot_psp_vs_distance():
     d_vals = np.linspace(5, 15, 10)
     res = []
@@ -73,9 +70,8 @@ def plot_psp_vs_distance():
     plt.show()
 
 
-# =========================
+
 # 2. PSP vs Tau
-# =========================
 def plot_psp_vs_tau():
     tau_vals = np.linspace(0.01, 1.11, 10)
     res = []
@@ -100,9 +96,8 @@ def plot_psp_vs_tau():
     plt.show()
 
 
-# =========================
+
 # 3. PSP vs Lambda
-# =========================
 def plot_psp_vs_lambda():
     lam_vals = np.linspace(0.001, 0.01, 10)
     res = []
@@ -124,9 +119,7 @@ def plot_psp_vs_lambda():
     plt.show()
 
 
-# =========================
 # 4. CCP vs Epsilon
-# =========================
 def plot_ccp_vs_epsilon():
     eps_vals = np.linspace(-30, 100, 15)
     res = []
@@ -146,9 +139,7 @@ def plot_ccp_vs_epsilon():
     plt.show()
 
 
-# =========================
 # 5. CCP vs Lambda
-# =========================
 def plot_ccp_vs_lambda():
     lam_vals = np.linspace(0.002, 0.06, 8)
     res = []
@@ -175,9 +166,7 @@ def plot_ccp_vs_lambda():
     plt.show()
 
 
-# =========================
 # 6. JPISAC vs Distance
-# =========================
 def plot_jpisac_vs_distance():
     d_vals = np.linspace(0, 15, 8)
     res = []
@@ -197,9 +186,7 @@ def plot_jpisac_vs_distance():
     plt.show()
 
 
-# =========================
 # 7. JPISAC vs Tau
-# =========================
 def plot_jpisac_vs_tau():
     tau_vals = np.linspace(0.01, 0.2, 8)
     res = []
@@ -219,9 +206,7 @@ def plot_jpisac_vs_tau():
     plt.show()
 
 
-# =========================
 # 8. Tradeoff PSP vs CCP
-# =========================
 def plot_tradeoff():
     beta_vals = np.linspace(0.2, 0.9, 10)
 
@@ -254,9 +239,7 @@ def plot_tradeoff():
     plt.show()
 
 
-# =========================
 # 9. PSP & CCP vs Beta
-# =========================
 def plot_beta():
     beta_vals = np.linspace(0.1, 0.9, 8)
 
